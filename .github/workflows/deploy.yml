@@ -13,23 +13,42 @@ jobs:
     strategy:
       matrix:
         os: [ubuntu-latest]
+        go-version: ["1.14.0"]
         python-version: [3.8]
     steps:
     - uses: actions/checkout@v2
 
-    # Install dependencies
     - name: Set up Python ${{ matrix.python-version }}
       uses: actions/setup-python@v1
       with:
         python-version: ${{ matrix.python-version }}
-    - name: Install dependencies
+
+    - name: Install Python dependencies
       run: |
         pip install -r requirements.txt
+        pip install jupyterlite
 
     # Build the book
     - name: Build the book
       run: |
         jupyter-book build dtbook
+
+    - name: Build jupyterlite
+      run: |
+        mkdir jupyterlite
+        cd jupyterlite
+        jupyter lite init
+        mv _output ../dtbook/_build/html/jupyterlite
+
+    - name: Generate pages with snowman
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      run: |
+        cd wikidata
+        gh release download --repo glaciers-in-archives/snowman -p "*snowman-linux-amd64*"
+        chmod a+x snowman-linux-amd64
+        ./snowman-linux-amd64 build
+        mv site ../dtbook/_build/html/wikidata
 
     # Deploy the book's HTML to gh-pages branch
     - name: GitHub Pages action
