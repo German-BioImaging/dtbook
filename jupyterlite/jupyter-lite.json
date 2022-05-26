@@ -12,7 +12,6 @@
     "fullStaticUrl": "./build",
     "licensesUrl": "./lab/api/licenses",
     "mathjaxConfig": "TeX-AMS_CHTML-full,Safe",
-    "preferredPath": "/",
-    "collaborative": true
+    "preferredPath": "/"
   }
 }
