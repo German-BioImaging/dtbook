@@ -7,4 +7,5 @@ chapters:
 - file: markdown
 - file: notebooks
 - file: wikidata/index
-- glob: wikidata/works/*
+  sections:
+  - glob: wikidata/works/*
