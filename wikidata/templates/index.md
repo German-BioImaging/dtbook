@@ -1,3 +1,4 @@
+# Data
 {{ template "base" . }}
 
 {{ define "title" }}{{ (index . 0).title }}{{ end }}
