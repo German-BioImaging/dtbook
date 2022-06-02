@@ -27,6 +27,16 @@ jobs:
         pip install --pre jupyterlite
         pip install jupyterlab-webrtc-docprovider
 
+    - name: Generate pages with snowman
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      run: |
+        cd wikidata
+        gh release download --repo glaciers-in-archives/snowman -p "*snowman-linux-amd64*"
+        chmod a+x snowman-linux-amd64
+        ./snowman-linux-amd64 build
+        mv site ../dtbook/wikidata
+
     - name: Build the book
       run: |
         jupyter-book build dtbook
@@ -41,16 +51,6 @@ jobs:
         cp ../jupytercfg/overrides.json _output/repl/
         cp ../jupytercfg/overrides.json _output/retro/
         mv _output ../dtbook/_build/html/jupyterlite
-
-    - name: Generate pages with snowman
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      run: |
-        cd wikidata
-        gh release download --repo glaciers-in-archives/snowman -p "*snowman-linux-amd64*"
-        chmod a+x snowman-linux-amd64
-        ./snowman-linux-amd64 build
-        mv site ../dtbook/_build/html/wikidata
 
     - name: GitHub Pages action
       uses: peaceiris/actions-gh-pages@v3.6.1
