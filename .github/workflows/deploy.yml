@@ -31,11 +31,11 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: |
-        cd wikidata
+        cd dynamic
         gh release download --repo glaciers-in-archives/snowman -p "*snowman-linux-amd64*"
         chmod a+x snowman-linux-amd64
         ./snowman-linux-amd64 build
-        mv site ../dtbook/wikidata
+        mv site ../dtbook/data
 
     - name: Build the book
       run: |

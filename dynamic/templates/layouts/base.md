@@ -1,4 +1,4 @@
 {{ define "base" }}
     {{ block "content" . }}{{ end }}
-    {{ include "includes/footer.md" . }}
+    {{ include_text "includes/footer.md" . }}
 {{ end }}

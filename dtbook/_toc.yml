@@ -6,6 +6,6 @@ root: intro
 chapters:
 - file: markdown
 - file: notebooks
-- file: wikidata/index
+- file: data/index
   sections:
-  - glob: wikidata/works/*
+  - glob: data/works/*

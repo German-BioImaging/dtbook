@@ -1,7 +1,9 @@
+# {{ .workLabel }}
+
 {{ template "base" . }}
 
 {{ define "title" }}{{ .workLabel }}{{ end }}
 
 {{ define "content" }}
-# {{ .workLabel }}
+  This is content.
 {{ end }}
