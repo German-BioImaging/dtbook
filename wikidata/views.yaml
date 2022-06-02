@@ -1,7 +1,7 @@
 views:
-  - output: "index.html"
+  - output: "index.md"
     query: "index.rq"
-    template: "index.html"
-  - output: "works/{{qid}}.html"
+    template: "index.md"
+  - output: "works/{{qid}}.md"
     query: "index.rq"
-    template: "work.html"
+    template: "work.md"
