@@ -15,5 +15,5 @@ that [depicts](https://www.wikidata.org/wiki/Property:P180) something
 
 | Image | Gene | Condition | Age | Sex |
 | ----- | ---- | --------- | --- | --- |
-{{ range . }}| Image:{{ replace .sub "https://idr.openmicroscopy.org/webclient/img_detail/" "" 1 }} | {{ .gene }} | {{ .condition }} | {{ .age }} | {{ .sex }} |
+{{ range . }}| [Image:{{ replace .sub "https://idr.openmicroscopy.org/webclient/img_detail/" "" 1 }}]({{ .sub }}) | {{ .gene }} | {{ .condition }} | {{ .age }} | {{ .sex }} |
 {{ end }}
