@@ -2,7 +2,7 @@
   "jupyter-lite-schema-version": 0,
   "jupyter-config-data": {
     "appName": "JupyterLite",
-    "appVersion": "0.1.0-beta.7",
+    "appVersion": "0.1.0-beta.10",
     "baseUrl": "./",
     "appUrl": "./lab",
     "faviconUrl": "./lab/favicon.ico",
@@ -11,7 +11,6 @@
     "fullMathjaxUrl": "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js",
     "fullStaticUrl": "./build",
     "licensesUrl": "./lab/api/licenses",
-    "mathjaxConfig": "TeX-AMS_CHTML-full,Safe",
-    "preferredPath": "/"
+    "mathjaxConfig": "TeX-AMS_CHTML-full,Safe"
   }
 }
