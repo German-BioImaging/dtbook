@@ -4,6 +4,6 @@
 format: jb-book
 root: index
 chapters:
-- file: data/index
+- file: data/hpa/index
   sections:
-  - glob: data/works/*
+  - glob: data/hpa/*
