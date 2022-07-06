@@ -1,7 +1,6 @@
 views:
-  - output: "index.md"
-    query: "index.rq"
-    template: "index.md"
-  - output: "works/{{qid}}.md"
-    query: "index.rq"
-    template: "work.md"
+  - output: "hpa/index.md"
+    template: "hpa-index.md"
+  - output: "hpa/model.md"
+    query: "hpa-model.rq"
+    template: "hpa-model.md"

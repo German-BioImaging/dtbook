@@ -1,4 +1,4 @@
 sparql_client:
-  endpoint: "https://query.wikidata.org/sparql"
+  endpoint: "http://idr.semscape.org:3030/ds/"
   http_headers: 
-    User-Agent: "example Snowman (https://github.com/glaciers-in-archives/snowman)"
+    User-Agent: "DT Snowman (https://github.com/glaciers-in-archives/snowman)"
