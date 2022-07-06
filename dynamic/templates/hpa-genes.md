@@ -7,7 +7,7 @@ found in the HPA images along with the number of
 distinct [conditions](https://www.wikidata.org/wiki/Property:P1050)
 that they represent:
 
-| Gene | Condition |
-| ---- | --------- |
-{{ range . }}| {{ .gene }} | {{ .condition }} |
+| Gene | Condition Count |
+| ---- | --------------- |
+{{ range . }}| {{ .gene }} | {{ .conditions }} |
 {{ end }}
