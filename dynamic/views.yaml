@@ -4,3 +4,6 @@ views:
   - output: "hpa/model.md"
     query: "hpa-model.rq"
     template: "hpa-model.md"
+  - output: "hpa/genes.md"
+    query: "hpa-genes.rq"
+    template: "hpa-genes.md"
