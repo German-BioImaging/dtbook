@@ -10,5 +10,5 @@ WHERE {
       [ <http://www.wikidata.org/prop/direct/P1050> ?condition ],
       [ <http://www.wikidata.org/prop/direct/P3629> ?age ],
       [ <http://www.wikidata.org/prop/direct/P21> ?sex ].
-  FILTER(regex(?disease, "bioontology"))
+  # FILTER(regex(?disease, "bioontology")) TOO SLOW
 } limit 100
