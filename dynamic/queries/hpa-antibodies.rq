@@ -1,0 +1,8 @@
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+PREFIX hpa: <http://www.proteinatlas.org/search/>
+
+SELECT ?sub (count(?image) as ?images) WHERE {
+  ?sub a <http://www.wikidata.org/entity/Q1172284>.
+  ?image dcterms:isPartOf ?sub.
+} group by ?sub limit 100

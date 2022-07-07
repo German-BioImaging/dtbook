@@ -7,3 +7,6 @@ views:
   - output: "hpa/genes.md"
     query: "hpa-genes.rq"
     template: "hpa-genes.md"
+  - output: "hpa/antibodies.md"
+    query: "hpa-antibodies.rq"
+    template: "hpa-antibodies.md"
