@@ -1,0 +1,702 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Antibodies &#8212; ΔTissue Book</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=62ba249389abaaa9ffc34bf36a076bdc1d65ee18" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?digest=f31d14ad54b65d19161ba51d4ffff3a77ae00456"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Genes" href="genes.html" />
+    <link rel="prev" title="HPA" href="index.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../../_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">ΔTissue Book</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../index.html">
+                    Introduction
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="index.html">
+   HPA
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Antibodies
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="genes.html">
+     Genes
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="model.html">
+     Model
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://github.com/german-bioimaging/dtbook"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/german-bioimaging/dtbook/issues/new?title=Issue%20on%20page%20%2Fdata/hpa/antibodies.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../../_sources/data/hpa/antibodies.md"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.md</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Antibodies</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <section class="tex2jax_ignore mathjax_ignore" id="antibodies">
+<h1>Antibodies<a class="headerlink" href="#antibodies" title="Permalink to this headline">#</a></h1>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Antibody</p></th>
+<th class="head"><p>Image Count</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><span class="xref myst">http://www.proteinatlas.org/search/HPA054126</span></p></td>
+<td><p>507</p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="xref myst">http://www.proteinatlas.org/search/HPA040971</span></p></td>
+<td><p>498</p></td>
+</tr>
+<tr class="row-even"><td><p><span class="xref myst">http://www.proteinatlas.org/search/HPA046099</span></p></td>
+<td><p>513</p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="xref myst">http://www.proteinatlas.org/search/HPA062674</span></p></td>
+<td><p>475</p></td>
+</tr>
+<tr class="row-even"><td><p><span class="xref myst">http://www.proteinatlas.org/search/HPA060274</span></p></td>
+<td><p>434</p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="xref myst">http://www.proteinatlas.org/search/HPA045602</span></p></td>
+<td><p>507</p></td>
+</tr>
+<tr class="row-even"><td><p><span class="xref myst">http://www.proteinatlas.org/search/HPA044404</span></p></td>
+<td><p>487</p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="xref myst">http://www.proteinatlas.org/search/HPA063871</span></p></td>
+<td><p>478</p></td>
+</tr>
+<tr class="row-even"><td><p><span class="xref myst">http://www.proteinatlas.org/search/HPA037974</span></p></td>
+<td><p>475</p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="xref myst">http://www.proteinatlas.org/search/HPA042627</span></p></td>
+<td><p>525</p></td>
+</tr>
+<tr class="row-even"><td><p><span class="xref myst">http://www.proteinatlas.org/search/HPA068024</span></p></td>
+<td><p>468</p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="xref myst">http://www.proteinatlas.org/search/CAB056157</span></p></td>
+<td><p>500</p></td>
+</tr>
+<tr class="row-even"><td><p><span class="xref myst">http://www.proteinatlas.org/search/CAB037083</span></p></td>
+<td><p>493</p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="xref myst">http://www.proteinatlas.org/search/HPA057855</span></p></td>
+<td><p>485</p></td>
+</tr>
+<tr class="row-even"><td><p><span class="xref myst">http://www.proteinatlas.org/search/HPA049695</span></p></td>
+<td><p>504</p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="xref myst">http://www.proteinatlas.org/search/HPA038076</span></p></td>
+<td><p>522</p></td>
+</tr>
+<tr class="row-even"><td><p><span class="xref myst">http://www.proteinatlas.org/search/HPA036510</span></p></td>
+<td><p>446</p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="xref myst">http://www.proteinatlas.org/search/HPA045868</span></p></td>
+<td><p>493</p></td>
+</tr>
+<tr class="row-even"><td><p><span class="xref myst">http://www.proteinatlas.org/search/HPA043958</span></p></td>
+<td><p>478</p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="xref myst">http://www.proteinatlas.org/search/HPA036776</span></p></td>
+<td><p>470</p></td>
+</tr>
+<tr class="row-even"><td><p><span class="xref myst">http://www.proteinatlas.org/search/HPA040970</span></p></td>
+<td><p>514</p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="xref myst">http://www.proteinatlas.org/search/HPA031390</span></p></td>
+<td><p>496</p></td>
+</tr>
+<tr class="row-even"><td><p><span class="xref myst">http://www.proteinatlas.org/search/HPA054127</span></p></td>
+<td><p>471</p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="xref myst">http://www.proteinatlas.org/search/CAB058689</span></p></td>
+<td><p>418</p></td>
+</tr>
+<tr class="row-even"><td><p><span class="xref myst">http://www.proteinatlas.org/search/HPA031619</span></p></td>
+<td><p>526</p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="xref myst">http://www.proteinatlas.org/search/HPA048362</span></p></td>
+<td><p>472</p></td>
+</tr>
+<tr class="row-even"><td><p><span class="xref myst">http://www.proteinatlas.org/search/HPA059286</span></p></td>
+<td><p>487</p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="xref myst">http://www.proteinatlas.org/search/HPA059153</span></p></td>
+<td><p>525</p></td>
+</tr>
+<tr class="row-even"><td><p><span class="xref myst">http://www.proteinatlas.org/search/HPA039140</span></p></td>
+<td><p>494</p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="xref myst">http://www.proteinatlas.org/search/HPA055327</span></p></td>
+<td><p>505</p></td>
+</tr>
+<tr class="row-even"><td><p><span class="xref myst">http://www.proteinatlas.org/search/HPA035445</span></p></td>
+<td><p>488</p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="xref myst">http://www.proteinatlas.org/search/HPA037975</span></p></td>
+<td><p>507</p></td>
+</tr>
+<tr class="row-even"><td><p><span class="xref myst">http://www.proteinatlas.org/search/HPA035578</span></p></td>
+<td><p>505</p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="xref myst">http://www.proteinatlas.org/search/CAB058688</span></p></td>
+<td><p>508</p></td>
+</tr>
+<tr class="row-even"><td><p><span class="xref myst">http://www.proteinatlas.org/search/CAB056158</span></p></td>
+<td><p>509</p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="xref myst">http://www.proteinatlas.org/search/HPA049694</span></p></td>
+<td><p>514</p></td>
+</tr>
+<tr class="row-even"><td><p><span class="xref myst">http://www.proteinatlas.org/search/HPA047164</span></p></td>
+<td><p>521</p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="xref myst">http://www.proteinatlas.org/search/CAB037084</span></p></td>
+<td><p>531</p></td>
+</tr>
+<tr class="row-even"><td><p><span class="xref myst">http://www.proteinatlas.org/search/HPA038075</span></p></td>
+<td><p>464</p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="xref myst">http://www.proteinatlas.org/search/HPA051271</span></p></td>
+<td><p>494</p></td>
+</tr>
+<tr class="row-even"><td><p><span class="xref myst">http://www.proteinatlas.org/search/HPA056525</span></p></td>
+<td><p>510</p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="xref myst">http://www.proteinatlas.org/search/CAB037309</span></p></td>
+<td><p>482</p></td>
+</tr>
+<tr class="row-even"><td><p><span class="xref myst">http://www.proteinatlas.org/search/HPA059150</span></p></td>
+<td><p>485</p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="xref myst">http://www.proteinatlas.org/search/HPA048363</span></p></td>
+<td><p>482</p></td>
+</tr>
+<tr class="row-even"><td><p><span class="xref myst">http://www.proteinatlas.org/search/HPA048496</span></p></td>
+<td><p>484</p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="xref myst">http://www.proteinatlas.org/search/HPA070820</span></p></td>
+<td><p>529</p></td>
+</tr>
+<tr class="row-even"><td><p><span class="xref myst">http://www.proteinatlas.org/search/HPA042758</span></p></td>
+<td><p>513</p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="xref myst">http://www.proteinatlas.org/search/HPA035444</span></p></td>
+<td><p>516</p></td>
+</tr>
+<tr class="row-even"><td><p><span class="xref myst">http://www.proteinatlas.org/search/HPA055459</span></p></td>
+<td><p>488</p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="xref myst">http://www.proteinatlas.org/search/HPA072613</span></p></td>
+<td><p>513</p></td>
+</tr>
+<tr class="row-even"><td><p><span class="xref myst">http://www.proteinatlas.org/search/CAB058687</span></p></td>
+<td><p>497</p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="xref myst">http://www.proteinatlas.org/search/HPA065526</span></p></td>
+<td><p>450</p></td>
+</tr>
+<tr class="row-even"><td><p><span class="xref myst">http://www.proteinatlas.org/search/CAB037081</span></p></td>
+<td><p>483</p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="xref myst">http://www.proteinatlas.org/search/HPA047032</span></p></td>
+<td><p>482</p></td>
+</tr>
+<tr class="row-even"><td><p><span class="xref myst">http://www.proteinatlas.org/search/HPA058085</span></p></td>
+<td><p>513</p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="xref myst">http://www.proteinatlas.org/search/HPA047165</span></p></td>
+<td><p>487</p></td>
+</tr>
+<tr class="row-even"><td><p><span class="xref myst">http://www.proteinatlas.org/search/HPA061473</span></p></td>
+<td><p>479</p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="xref myst">http://www.proteinatlas.org/search/HPA060144</span></p></td>
+<td><p>499</p></td>
+</tr>
+<tr class="row-even"><td><p><span class="xref myst">http://www.proteinatlas.org/search/HPA041428</span></p></td>
+<td><p>506</p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="xref myst">http://www.proteinatlas.org/search/HPA036774</span></p></td>
+<td><p>524</p></td>
+</tr>
+<tr class="row-even"><td><p><span class="xref myst">http://www.proteinatlas.org/search/HPA062671</span></p></td>
+<td><p>495</p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="xref myst">http://www.proteinatlas.org/search/CAB056159</span></p></td>
+<td><p>517</p></td>
+</tr>
+<tr class="row-even"><td><p><span class="xref myst">http://www.proteinatlas.org/search/HPA043823</span></p></td>
+<td><p>498</p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="xref myst">http://www.proteinatlas.org/search/HPA031392</span></p></td>
+<td><p>471</p></td>
+</tr>
+<tr class="row-even"><td><p><span class="xref myst">http://www.proteinatlas.org/search/HPA040229</span></p></td>
+<td><p>480</p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="xref myst">http://www.proteinatlas.org/search/HPA035576</span></p></td>
+<td><p>499</p></td>
+</tr>
+<tr class="row-even"><td><p><span class="xref myst">http://www.proteinatlas.org/search/HPA070954</span></p></td>
+<td><p>528</p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="xref myst">http://www.proteinatlas.org/search/HPA046800</span></p></td>
+<td><p>506</p></td>
+</tr>
+<tr class="row-even"><td><p><span class="xref myst">http://www.proteinatlas.org/search/HPA042626</span></p></td>
+<td><p>462</p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="xref myst">http://www.proteinatlas.org/search/HPA052471</span></p></td>
+<td><p>493</p></td>
+</tr>
+<tr class="row-even"><td><p><span class="xref myst">http://www.proteinatlas.org/search/HPA042759</span></p></td>
+<td><p>480</p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="xref myst">http://www.proteinatlas.org/search/HPA044405</span></p></td>
+<td><p>482</p></td>
+</tr>
+<tr class="row-even"><td><p><span class="xref myst">http://www.proteinatlas.org/search/HPA044188</span></p></td>
+<td><p>492</p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="xref myst">http://www.proteinatlas.org/search/HPA058086</span></p></td>
+<td><p>468</p></td>
+</tr>
+<tr class="row-even"><td><p><span class="xref myst">http://www.proteinatlas.org/search/CAB058686</span></p></td>
+<td><p>505</p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="xref myst">http://www.proteinatlas.org/search/HPA049692</span></p></td>
+<td><p>510</p></td>
+</tr>
+<tr class="row-even"><td><p><span class="xref myst">http://www.proteinatlas.org/search/HPA047166</span></p></td>
+<td><p>471</p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="xref myst">http://www.proteinatlas.org/search/HPA046801</span></p></td>
+<td><p>480</p></td>
+</tr>
+<tr class="row-even"><td><p><span class="xref myst">http://www.proteinatlas.org/search/HPA060278</span></p></td>
+<td><p>464</p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="xref myst">http://www.proteinatlas.org/search/HPA041427</span></p></td>
+<td><p>519</p></td>
+</tr>
+<tr class="row-even"><td><p><span class="xref myst">http://www.proteinatlas.org/search/HPA036775</span></p></td>
+<td><p>512</p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="xref myst">http://www.proteinatlas.org/search/HPA036642</span></p></td>
+<td><p>481</p></td>
+</tr>
+<tr class="row-even"><td><p><span class="xref myst">http://www.proteinatlas.org/search/HPA037845</span></p></td>
+<td><p>503</p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="xref myst">http://www.proteinatlas.org/search/HPA044185</span></p></td>
+<td><p>479</p></td>
+</tr>
+<tr class="row-even"><td><p><span class="xref myst">http://www.proteinatlas.org/search/HPA045606</span></p></td>
+<td><p>505</p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="xref myst">http://www.proteinatlas.org/search/HPA037712</span></p></td>
+<td><p>516</p></td>
+</tr>
+<tr class="row-even"><td><p><span class="xref myst">http://www.proteinatlas.org/search/HPA070951</span></p></td>
+<td><p>444</p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="xref myst">http://www.proteinatlas.org/search/HPA048498</span></p></td>
+<td><p>500</p></td>
+</tr>
+<tr class="row-even"><td><p><span class="xref myst">http://www.proteinatlas.org/search/HPA042889</span></p></td>
+<td><p>514</p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="xref myst">http://www.proteinatlas.org/search/HPA044408</span></p></td>
+<td><p>488</p></td>
+</tr>
+<tr class="row-even"><td><p><span class="xref myst">http://www.proteinatlas.org/search/HPA042623</span></p></td>
+<td><p>510</p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="xref myst">http://www.proteinatlas.org/search/CAB034450</span></p></td>
+<td><p>509</p></td>
+</tr>
+<tr class="row-even"><td><p><span class="xref myst">http://www.proteinatlas.org/search/HPA037979</span></p></td>
+<td><p>504</p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="xref myst">http://www.proteinatlas.org/search/HPA035318</span></p></td>
+<td><p>526</p></td>
+</tr>
+<tr class="row-even"><td><p><span class="xref myst">http://www.proteinatlas.org/search/HPA031394</span></p></td>
+<td><p>504</p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="xref myst">http://www.proteinatlas.org/search/HPA053057</span></p></td>
+<td><p>490</p></td>
+</tr>
+<tr class="row-even"><td><p><span class="xref myst">http://www.proteinatlas.org/search/HPA055589</span></p></td>
+<td><p>487</p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="xref myst">http://www.proteinatlas.org/search/HPA046937</span></p></td>
+<td><p>524</p></td>
+</tr>
+<tr class="row-even"><td><p><span class="xref myst">http://www.proteinatlas.org/search/HPA063876</span></p></td>
+<td><p>424</p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="xref myst">http://www.proteinatlas.org/search/HPA046804</span></p></td>
+<td><p>461</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./data/hpa"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="index.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">HPA</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="genes.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Genes</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Josh Moore<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>
