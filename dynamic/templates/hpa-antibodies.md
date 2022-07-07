@@ -4,5 +4,5 @@
 
 | Antibody | Image Count |
 | -------- | ----------- |
-{{ range . }}| [{{ .sub }}](./{{ .sub }}.html) | {{ .images }} |
+{{ range . }}| [{{ replace .sub "http://www.proteinatlas.org/search/" "" 1 }}]( {{ replace .sub "http://www.proteinatlas.org/search/" "" 1 }}.html ) | {{ .images }} |
 {{ end }}
