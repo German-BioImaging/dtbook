@@ -10,3 +10,6 @@ views:
   - output: "hpa/antibodies.md"
     query: "hpa-antibodies.rq"
     template: "hpa-antibodies.md"
+  - output: "hpa/antibodies/{{name}}.md"
+    query: "hpa-antibody.rq"
+    template: "hpa-antibody.md"

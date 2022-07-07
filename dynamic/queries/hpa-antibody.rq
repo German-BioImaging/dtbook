@@ -2,8 +2,8 @@ PREFIX dcterms: <http://purl.org/dc/terms/>
 PREFIX wdt: <http://www.wikidata.org/prop/direct/>
 PREFIX hpa: <http://www.proteinatlas.org/search/>
 
-SELECT ?antibody (count(?image) as ?images) WHERE {
+SELECT ?antibody (count(?image) as ?images) ?name WHERE {
   ?antibody a <http://www.wikidata.org/entity/Q1172284>.
   ?image dcterms:isPartOf ?antibody.
    BIND(replace(str(?antibody), str(hpa:), "") as ?name)
-} group by ?antibody limit 100
+} group by ?antibody ?name limit 100
