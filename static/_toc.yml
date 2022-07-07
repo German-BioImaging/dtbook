@@ -5,5 +5,8 @@ format: jb-book
 root: index
 chapters:
 - file: data/hpa/index
+- file: data/hpa/model
+- file: data/hpa/genes
+- file: data/hpa/antibodies
   sections:
-  - glob: data/hpa/*
+  - glob: data/hpa/antibody-*
